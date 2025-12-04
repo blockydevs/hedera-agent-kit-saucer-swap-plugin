@@ -1,0 +1,45 @@
+{
+  "name": "saucer-swap-plugin",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "SaucerSwap plugin for Hedera Agent Kit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "hedera",
+    "saucerswap",
+    "defi",
+    "plugin",
+    "agent-kit"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "hedera-agent-kit": "^3.5.2",
+    "tsup": "^8.5.0",
+    "zod": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitest/coverage-v8": "^1.6.0",
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.6.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ]
+}
