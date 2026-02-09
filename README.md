@@ -15,6 +15,16 @@ A plugin for the Hedera Agent Kit that enables SaucerSwap V2 DeFi operations on 
 npm install saucer-swap-plugin
 ```
 
+## Prerequisites
+
+Before using this plugin, you need to set up the following environment variables:
+
+- `SAUCERSWAP_API_KEY` - API key for SaucerSwap REST API access
+- `ACCOUNT_ID` - Your Hedera account ID
+- `PRIVATE_KEY` - Your Hedera account private key (ECDSA format)
+
+See [SETUP.md](./SETUP.md) for detailed setup instructions.
+
 ## Usage
 
 ### With Hedera Agent Kit

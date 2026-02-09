@@ -1,10 +1,56 @@
 # SaucerSwap Plugin Setup Guide
 
-This guide explains how to obtain the required contract addresses and ABIs for the SaucerSwap plugin.
+This guide explains how to obtain the required contract addresses, ABIs, and environment variables for the SaucerSwap plugin.
+
+## Environment Variables
+
+Before using the plugin, you need to set up the following environment variables:
+
+### Required Environment Variables
+
+1. **`SAUCERSWAP_API_KEY`** (required)
+   - Used by the plugin to access SaucerSwap's REST API for pool discovery
+   - Contact SaucerSwap team or check their documentation for how to obtain this key
+
+2. **`ACCOUNT_ID`** (required)
+   - Your Hedera account ID in format `0.0.xxxxx`
+   - Get this from your Hedera portal or wallet
+
+3. **`PRIVATE_KEY`** (required)
+   - Your Hedera account private key in ECDSA format (starts with `302e`)
+   - Keep this secure and never commit it to version control
+
+4. **`OPENAI_API_KEY`** (required for LangChain example)
+   - Only needed if running the example with OpenAI
+   - Get from https://platform.openai.com/api-keys
+
+### Setting Up Environment Variables
+
+For the example application:
+
+1. **Navigate to the examples directory**:
+   ```bash
+   cd examples/
+   ```
+
+2. **Copy the example environment file**:
+   ```bash
+   cp .example.env .env
+   ```
+
+3. **Edit the `.env` file** and replace the placeholder values with your actual credentials:
+   ```bash
+   # Edit with your preferred editor
+   nano .env
+   # or
+   code .env
+   ```
+
+4. **Never commit your `.env` file** - it's already in `.gitignore` for security
 
 ## Required Information
 
-To complete the plugin setup, you need:
+To complete the plugin setup, you also need:
 
 1. **Contract Addresses** (for both mainnet and testnet):
    - SaucerSwap Router contract address
@@ -118,10 +164,11 @@ If you can't find the required information:
 
 Once you have the real addresses and ABIs:
 
-1. Update the configuration files
-2. Implement the actual contract interaction logic
-3. Test the plugin functionality
-4. Deploy and use the plugin
+1. **Set up environment variables** (see Environment Variables section above)
+2. Update the configuration files with real contract addresses
+3. Replace placeholder ABIs with actual contract ABIs
+4. Test the plugin functionality on testnet first
+5. Deploy and use the plugin
 
-Remember to keep this information secure and verify all addresses before use!
+Remember to keep your credentials secure and verify all addresses before use!
 
