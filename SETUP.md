@@ -10,7 +10,7 @@ Before using the plugin, you need to set up the following environment variables:
 
 1. **`SAUCERSWAP_API_KEY`** (required)
    - Used by the plugin to access SaucerSwap's REST API for pool discovery
-   - Contact SaucerSwap team or check their documentation for how to obtain this key
+   - [Contact SaucerSwap team](https://docs.saucerswap.finance/v/developer/rest-api/authentication#getting-an-api-key) by emailing support@saucerswap.finance to obtain this key. 
 
 2. **`ACCOUNT_ID`** (required)
    - Your Hedera account ID in format `0.0.xxxxx`
