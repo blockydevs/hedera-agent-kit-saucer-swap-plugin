@@ -1,4 +1,4 @@
-import { LedgerId } from "@hashgraph/sdk";
+import { LedgerId } from "@hiero-ledger/sdk";
 import {
   SaucerSwapV2CompactPool,
   SaucerSwapRestNetwork,

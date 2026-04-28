@@ -25,9 +25,12 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "hedera-agent-kit": "^3.5.2",
     "tsup": "^8.5.0",
     "zod": "^3.0.0"
+  },
+  "peerDependencies": {
+    "@hashgraph/hedera-agent-kit": ">=4.0.0",
+    "@hiero-ledger/sdk": "*"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

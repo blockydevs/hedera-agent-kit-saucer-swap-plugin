@@ -1,6 +1,6 @@
 // write a config service to get the config from the config file
 import { SaucerSwapConfig, saucerSwapConfig } from "../config";
-import { ContractId, LedgerId, TokenId } from "@hashgraph/sdk";
+import { ContractId, LedgerId, TokenId } from "@hiero-ledger/sdk";
 
 export class SaucerSwapV2ConfigService {
     private readonly saucerSwapConfig: SaucerSwapConfig;

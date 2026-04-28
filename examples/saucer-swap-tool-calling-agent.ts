@@ -1,9 +1,10 @@
-import { AgentMode, HederaLangchainToolkit } from 'hedera-agent-kit';
+import { AgentMode } from '@hashgraph/hedera-agent-kit';
+import { HederaLangchainToolkit } from '@hashgraph/hedera-agent-kit-langchain';
 import { ChatOpenAI } from '@langchain/openai';
 import { ChatPromptTemplate } from '@langchain/core/prompts';
 import { AgentExecutor, createToolCallingAgent } from '@langchain/classic/agents';
 import { BufferMemory } from '@langchain/classic/memory';
-import { Client, PrivateKey } from '@hashgraph/sdk';
+import { Client, PrivateKey } from '@hiero-ledger/sdk';
 import prompts from 'prompts';
 import * as dotenv from 'dotenv';
 import { saucerSwapPlugin } from '../';
@@ -26,11 +27,10 @@ async function bootstrap(): Promise<void> {
     .setMaxAttempts(10) // Reduce max attempts further
     .setMaxBackoff(5000) // 5 seconds max backoff
 
-  // Prepare Hedera toolkit (load all tools by default)
+  // Prepare Hedera toolkit
   const hederaAgentToolkit = new HederaLangchainToolkit({
     client,
     configuration: {
-      tools: [], // use an empty array if you want to load all tools
       context: {
         mode: AgentMode.AUTONOMOUS,
       },

@@ -1,6 +1,6 @@
-import { Context, Tool, PromptGenerator, getMirrornodeService } from "hedera-agent-kit";
+import { Context, Tool, PromptGenerator, getMirrornodeService } from "@hashgraph/hedera-agent-kit";
 import { z } from 'zod';
-import type { Client } from "@hashgraph/sdk";
+import type { Client } from "@hiero-ledger/sdk";
 import { getSwapQuoteV2Parameters, getSwapQuoteV2ParametersNormalised } from "../saucer-swap.zod";
 import { SaucerSwapV2QueryServiceImpl } from "../service/saucer-swap-v2-query-service-impl";
 import SaucerSwapV2ParameterNormaliser from "../saucer-swap-v2-parameter-normaliser";

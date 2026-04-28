@@ -1,4 +1,4 @@
-import type { Context, Plugin } from "hedera-agent-kit";
+import type { Context, Plugin } from "@hashgraph/hedera-agent-kit";
 
 // Import all tool files
 import getSwapQuoteV2Tool, { GET_SWAP_QUOTE_V2_TOOL } from "./tools/get-swap-quote-v2";
