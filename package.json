@@ -29,8 +29,8 @@
     "zod": "^3.0.0"
   },
   "peerDependencies": {
-    "@hashgraph/hedera-agent-kit": ">=4.0.0",
-    "@hiero-ledger/sdk": "*"
+    "@hashgraph/hedera-agent-kit": "^4.0.0",
+    "@hiero-ledger/sdk": "^2.82.0"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
