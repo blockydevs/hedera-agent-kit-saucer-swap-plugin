@@ -1,6 +1,6 @@
-import { TokenId } from "@hashgraph/sdk";
+import { TokenId } from "@hiero-ledger/sdk";
 import BigNumber from 'bignumber.js';
-import { AccountResolver } from "hedera-agent-kit";
+import { AccountResolver } from "@hashgraph/hedera-agent-kit";
 import { SaucerSwapV2CompactPool } from "./service/saucer-swap-rest-pools-service.interface";
 
 

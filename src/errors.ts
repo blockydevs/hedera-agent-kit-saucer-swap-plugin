@@ -53,3 +53,17 @@ export class ConfigurationError extends SaucerSwapError {
   }
 }
 
+export class TokenNotAssociatedError extends SaucerSwapError {
+  constructor(accountId: string, tokenId: string, signerAccountId?: string) {
+    const signerHint = signerAccountId
+      ? ` Cannot auto-associate because the recipient differs from the signer (${signerAccountId}). Have the recipient associate the token first.`
+      : ' Have the recipient associate the token first.';
+    super(
+      `Recipient ${accountId} does not have token ${tokenId} associated.${signerHint}`,
+      'TOKEN_NOT_ASSOCIATED'
+    );
+    this.name = 'TokenNotAssociatedError';
+    Object.setPrototypeOf(this, TokenNotAssociatedError.prototype);
+  }
+}
+

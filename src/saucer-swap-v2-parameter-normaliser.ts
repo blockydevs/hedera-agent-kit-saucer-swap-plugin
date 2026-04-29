@@ -1,6 +1,6 @@
-import { Context, AccountResolver, IHederaMirrornodeService, contractExecuteTransactionParametersNormalised } from "hedera-agent-kit";
+import { Context, AccountResolver, IHederaMirrornodeService, contractExecuteTransactionParametersNormalised } from "@hashgraph/hedera-agent-kit";
 import { getSwapQuoteV2Parameters, getSwapQuoteV2ParametersNormalised, swapV2Parameters } from './saucer-swap.zod'
-import { Client } from "@hashgraph/sdk";
+import { Client } from "@hiero-ledger/sdk";
 import { ethers } from "ethers";
 import z from 'zod';
 import { getHederaTokenAddress, getHederaTokenEVMAddress, getTokenDecimals, toBaseUnit } from "./utils";
